@@ -1,0 +1,53 @@
+h1{
+    font-size: 35px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background: #5e5858;
+    color: #ffffff;
+    margin: 15px 0 0 0;
+}
+
+header ul {
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+
+header li{
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+.underscore {
+    border: 3px solid black;
+    font-size: 100px;
+    text-align: center;
+    margin: 15px auto;
+    height: 150px;
+    width: 80%;
+}
+
+.rightGuess{
+    border: 3px solid black;
+    font-size: 20px;
+    text-align: center;
+    margin: 15px auto;
+    height: 150px;
+    width: 80%;
+}
+
+.wrongGuess {
+    border: 3px solid black;
+    font-size: 20px;
+    text-align: center;
+    margin: 15px auto;
+    height: 150px;
+    width: 80%;
+}
