@@ -7,7 +7,7 @@ let wrongWord = [];
 let chosenWord = word[randNum];
 console.log(chosenWord);
 let underScore = [];
-let docUnderScore = document.getElementsByClassName("underscore");
+let docUnderscore = document.getElementsByClassName("underscore");
 let docRightGuess = document.getElementsByClassName("rightGuess");
 let docWrongGuess = document.getElementsByClassName("wrongGuess");
 
@@ -25,13 +25,16 @@ let generateUnderscore = () => {
 console.log(generateUnderscore());
 //Get users guess
 document.addEventListener("keypress", (event) => {
-    let keyword = String.fromCharCode(event.keycode);
+    let keyword = String.fromCharCode(event.keyCode);
 //if guess is correct
     if (chosenWord.indexOf(keyword) > -1) {
+// add right words to array
         rightWord.push(keyword);
+        
+//replace underscores with letters
         underScore[chosenWord.indexOf(keyword)] = keyword;
-        underScore[0].innerHTML = underScore.join("");
-        docRightGUess[0].innerHTML = rightWord;
+        docUnderscore[0].innerHTML = underScore.join("");
+        docRightGuess[0].innerHTML = rightWord;
 
        if(underScore.join("") == chosenWord) {
         alert("You Win!");
@@ -39,10 +42,12 @@ document.addEventListener("keypress", (event) => {
     }
     else {
         wrongWord.push(keyword);
-        
+        docWrongGuess[0].innerHTML = wrongWord;
     }
 
 });
+
+docUnderscore[0].innerHTML = generateUnderScore().join("");
 //check if guess is right f
 //if right push to right array 
 //if wrong push to wrong array
